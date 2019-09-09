@@ -68,6 +68,3 @@ gem 'simple_form'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
-
-simple_form_for(@user, html: { class: 'form-inline' }) do |form|
-end
