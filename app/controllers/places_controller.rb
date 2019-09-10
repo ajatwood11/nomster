@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  # a bunch of other code
 
   def index
     @places = Place.all
@@ -16,14 +17,22 @@ end
 
 def show
   @place = Place.find(params[:id])
-  end
+end
 
  def edit
     @place = Place.find(params[:id])
+
+    if @place.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
   end
+
   
 def update
   @place = Place.find(params[:id])
+  if @place. user != current_user
+    return render plain: 'Not Allowed', status: :forbidden
+  end
   @place.update_attributes(place_params)
   redirect_to root_path
 end
