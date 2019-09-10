@@ -17,9 +17,13 @@ def show
   @place = Place.find(params[:id])
   end
 
+  def edit
+    @place = Place.find(params[:id])
+  end
+    
+  end
   private
 
   def place_params
     params.require(:place).permit(:name, :description, :address)
   end
-end
