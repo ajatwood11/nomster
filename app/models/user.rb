@@ -6,5 +6,5 @@ class User < ApplicationRecord
    has_many :places
    has_many :comments
    has_many :photos
-   has_many_attached :avatar
+   has_one_attached :picture
 end
