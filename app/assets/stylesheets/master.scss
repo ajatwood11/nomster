@@ -74,3 +74,8 @@ blockquote p {
   display: inline;
 }
 
+
+
+#google_map , #google_map :before, #google_map *:after {
+   -webkit-transform: none !important;
+}
