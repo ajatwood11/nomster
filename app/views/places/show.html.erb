@@ -149,20 +149,19 @@
 
 </div>
 <div class="clear"></div>
-<div class="row">
-<% @place.photos.each do |photo| %>
-<div class="col-14 col-sm-6">
+ <div class="row col-10 offset-1">
+        <% @place.photos.each do |photo| %>
+            <div class="col-12 col-sm-6">
+                <blockquote class="photo-display">
 
-      <blockquote>
-    <% if photo.present? %>
-    <%= image_tag photo.picture.url %>
-    <% end %>
-    <%= photo.caption %>
-      <small><%= photo.user.email %></small>
-      </blockquote>
-  </div>
-<% end %>
-</div>
+                    <%= image_tag photo.picture.to_s, class: 'show-image-size pictureClass' %>
+                    <p><% if photo.caption.present? %>
+                        <%= photo.caption %></p>
+                    <% end %>
+                </blockquote>
+            </div>
+        <% end %>
+    </div>
 
 
 
