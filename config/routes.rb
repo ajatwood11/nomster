@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :image_tags, only: :create
     
   end
+  resources :users, only: :show
 end
