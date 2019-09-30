@@ -75,3 +75,4 @@ gem "figaro"
 gem 'carrierwave', '~> 2.0.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem "fog-aws"
+gem 'will_paginate', '> 3.0'
