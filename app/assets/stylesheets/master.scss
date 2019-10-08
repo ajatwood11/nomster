@@ -141,7 +141,13 @@ a {
     background-color: #BEBEBE;
 }
 
+.show-image-size  {
+  object-fit: scale-down;
+   width: 300px;
+  height: 337px;
+}
 
 
-
-
+.text {
+  margin-top: 10px;
+}
